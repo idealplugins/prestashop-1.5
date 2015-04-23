@@ -41,7 +41,7 @@ class ps_targetpaynotifyUrlModuleFrontController extends ModuleFrontController
 			$ps_targetpay->updateTransaction($updateArr,$trxid, 'notify');
 			echo "Paid... ";
 		} else {
-			echo "Not Paid... ";
+			echo "Not paid ". $targetpayObj->getErrorMessage()."... ";
 		}
 
 		echo "(Prestashop-1.5, 23-04-2015)";
